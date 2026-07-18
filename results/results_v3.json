@@ -1,0 +1,2683 @@
+{
+ "parameters": {
+  "TIME_MANUAL": 12.0,
+  "TIME_AUTO": 0.5,
+  "TIME_DEV": 60.0,
+  "COST_PER_MIN": 1.2,
+  "P_HUMAN_ERR": 0.03,
+  "REWORK_MIN": 30.0,
+  "P_AUTO_FAIL": 0.005,
+  "FIX_MIN": 15.0,
+  "P_FRAGILE_FAIL": 0.3,
+  "FRAGILE_FIX_MIN": 20.0,
+  "P_INCIDENT": 0.1,
+  "INCIDENT_MIN": 180.0,
+  "AI_INFRA_USD_DAY": 12.0,
+  "AI_MAINT_MIN_DAY": 4.3,
+  "THRESHOLD": 5,
+  "P_SPEC": 0.85,
+  "REVIEW_MIN": 10.0,
+  "MAX_DECLINES": 2,
+  "TASKS_PER_DAY": 80,
+  "DAYS": 30
+ },
+ "n_seeds": 20,
+ "indist": [
+  {
+   "policy": "manual",
+   "reviews": "0",
+   "hours": "515.4 \u00b1 1.7",
+   "cost": "37,109 \u00b1 125",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "0.0 \u00b1 0.0",
+   "savings": "\u2014"
+  },
+  {
+   "policy": "rule",
+   "reviews": "0",
+   "hours": "206.9 \u00b1 3.9",
+   "cost": "14,900 \u00b1 281",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "5.5 \u00b1 1.4",
+   "savings": "59.8 \u00b1 0.7%"
+  },
+  {
+   "policy": "automate_all",
+   "reviews": "0",
+   "hours": "309.1 \u00b1 13.1",
+   "cost": "22,252 \u00b1 942",
+   "incidents": "49.0 \u00b1 3.6",
+   "wasted": "35.5 \u00b1 2.0",
+   "savings": "40.0 \u00b1 2.5%"
+  },
+  {
+   "policy": "automate_all_guard",
+   "reviews": "0",
+   "hours": "252.1 \u00b1 5.3",
+   "cost": "18,151 \u00b1 381",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "27.8 \u00b1 1.6",
+   "savings": "51.1 \u00b1 1.0%"
+  },
+  {
+   "policy": "full_ai",
+   "reviews": "0",
+   "hours": "213.4 \u00b1 4.3",
+   "cost": "15,882 \u00b1 312",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "5.2 \u00b1 1.3",
+   "savings": "57.2 \u00b1 0.8%"
+  },
+  {
+   "policy": "proposed",
+   "reviews": "5",
+   "hours": "191.8 \u00b1 3.9",
+   "cost": "14,325 \u00b1 278",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "0.5 \u00b1 0.3",
+   "savings": "61.4 \u00b1 0.7%"
+  }
+ ],
+ "shifted": [
+  {
+   "policy": "manual",
+   "reviews": "0",
+   "hours": "515.4 \u00b1 1.7",
+   "cost": "37,109 \u00b1 125",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "0.0 \u00b1 0.0",
+   "savings": "\u2014"
+  },
+  {
+   "policy": "rule",
+   "reviews": "0",
+   "hours": "277.3 \u00b1 5.0",
+   "cost": "19,968 \u00b1 363",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "7.2 \u00b1 1.0",
+   "savings": "46.2 \u00b1 0.9%"
+  },
+  {
+   "policy": "automate_all",
+   "reviews": "0",
+   "hours": "402.6 \u00b1 14.5",
+   "cost": "28,989 \u00b1 1,044",
+   "incidents": "75.3 \u00b1 3.9",
+   "wasted": "53.9 \u00b1 2.6",
+   "savings": "21.9 \u00b1 2.7%"
+  },
+  {
+   "policy": "automate_all_guard",
+   "reviews": "0",
+   "hours": "324.7 \u00b1 5.5",
+   "cost": "23,379 \u00b1 399",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "44.0 \u00b1 1.9",
+   "savings": "37.0 \u00b1 1.0%"
+  },
+  {
+   "policy": "full_ai",
+   "reviews": "0",
+   "hours": "296.9 \u00b1 5.0",
+   "cost": "21,889 \u00b1 361",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "7.2 \u00b1 1.1",
+   "savings": "41.0 \u00b1 0.9%"
+  },
+  {
+   "policy": "proposed",
+   "reviews": "3",
+   "hours": "285.6 \u00b1 3.7",
+   "cost": "21,076 \u00b1 269",
+   "incidents": "0.0 \u00b1 0.0",
+   "wasted": "0.1 \u00b1 0.2",
+   "savings": "43.2 \u00b1 0.8%"
+  }
+ ],
+ "indist_raw": {
+  "manual": [
+   {
+    "policy": "manual",
+    "hours": 507.0,
+    "cost": 36504.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 512.0,
+    "cost": 36864.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 518.0,
+    "cost": 37296.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 515.0,
+    "cost": 37080.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 513.5,
+    "cost": 36972.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 510.5,
+    "cost": 36756.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 516.5,
+    "cost": 37188.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 512.0,
+    "cost": 36864.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 515.5,
+    "cost": 37116.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 519.0,
+    "cost": 37368.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 514.5,
+    "cost": 37044.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 515.0,
+    "cost": 37080.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 520.0,
+    "cost": 37440.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 520.5,
+    "cost": 37476.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 510.5,
+    "cost": 36756.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 520.0,
+    "cost": 37440.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 515.0,
+    "cost": 37080.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 516.5,
+    "cost": 37188.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 517.0,
+    "cost": 37224.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 520.0,
+    "cost": 37440.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   }
+  ],
+  "rule": [
+   {
+    "policy": "rule",
+    "hours": 186.35833333333332,
+    "cost": 13417.8,
+    "incidents": 0,
+    "wasted": 6,
+    "fragile": 4,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 201.43333333333334,
+    "cost": 14503.199999999999,
+    "incidents": 0,
+    "wasted": 3,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 198.15833333333333,
+    "cost": 14267.4,
+    "incidents": 0,
+    "wasted": 9,
+    "fragile": 4,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 210.90833333333333,
+    "cost": 15185.4,
+    "incidents": 0,
+    "wasted": 4,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 208.84166666666667,
+    "cost": 15036.599999999999,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 193.69166666666666,
+    "cost": 13945.8,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 215.21666666666667,
+    "cost": 15495.599999999999,
+    "incidents": 0,
+    "wasted": 3,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 221.28333333333333,
+    "cost": 15932.4,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 215.24166666666667,
+    "cost": 15497.4,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 212.29166666666666,
+    "cost": 15285.0,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 214.64166666666668,
+    "cost": 15454.199999999999,
+    "incidents": 0,
+    "wasted": 7,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 210.05833333333334,
+    "cost": 15124.199999999999,
+    "incidents": 0,
+    "wasted": 3,
+    "fragile": 2,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 209.58333333333334,
+    "cost": 15090.0,
+    "incidents": 0,
+    "wasted": 3,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 210.31666666666666,
+    "cost": 15142.8,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 205.14166666666668,
+    "cost": 14770.199999999999,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 210.33333333333334,
+    "cost": 15144.0,
+    "incidents": 0,
+    "wasted": 11,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 209.54166666666666,
+    "cost": 15087.0,
+    "incidents": 0,
+    "wasted": 9,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 197.475,
+    "cost": 14218.199999999999,
+    "incidents": 0,
+    "wasted": 7,
+    "fragile": 4,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 205.95,
+    "cost": 14828.4,
+    "incidents": 0,
+    "wasted": 10,
+    "fragile": 2,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 202.5,
+    "cost": 14580.0,
+    "incidents": 0,
+    "wasted": 3,
+    "fragile": 4,
+    "reviews": 0,
+    "library": 84
+   }
+  ],
+  "automate_all": [
+   {
+    "policy": "automate_all",
+    "hours": 259.1666666666667,
+    "cost": 18660.0,
+    "incidents": 36,
+    "wasted": 34,
+    "fragile": 12,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 270.3333333333333,
+    "cost": 19464.0,
+    "incidents": 38,
+    "wasted": 42,
+    "fragile": 14,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 285.5,
+    "cost": 20556.0,
+    "incidents": 42,
+    "wasted": 43,
+    "fragile": 13,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 274.6666666666667,
+    "cost": 19776.0,
+    "incidents": 42,
+    "wasted": 41,
+    "fragile": 10,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 324.4166666666667,
+    "cost": 23358.0,
+    "incidents": 52,
+    "wasted": 39,
+    "fragile": 17,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 284.4166666666667,
+    "cost": 20478.0,
+    "incidents": 42,
+    "wasted": 39,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 335.25,
+    "cost": 24138.0,
+    "incidents": 55,
+    "wasted": 31,
+    "fragile": 19,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 350.8333333333333,
+    "cost": 25260.0,
+    "incidents": 56,
+    "wasted": 32,
+    "fragile": 24,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 287.3333333333333,
+    "cost": 20688.0,
+    "incidents": 38,
+    "wasted": 39,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 343.5833333333333,
+    "cost": 24738.0,
+    "incidents": 62,
+    "wasted": 33,
+    "fragile": 17,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 326.3333333333333,
+    "cost": 23496.0,
+    "incidents": 54,
+    "wasted": 30,
+    "fragile": 16,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 298.1666666666667,
+    "cost": 21468.0,
+    "incidents": 49,
+    "wasted": 37,
+    "fragile": 12,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 334.5,
+    "cost": 24084.0,
+    "incidents": 60,
+    "wasted": 30,
+    "fragile": 13,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 325.3333333333333,
+    "cost": 23424.0,
+    "incidents": 51,
+    "wasted": 33,
+    "fragile": 17,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 302.75,
+    "cost": 21798.0,
+    "incidents": 45,
+    "wasted": 38,
+    "fragile": 19,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 287.1666666666667,
+    "cost": 20676.0,
+    "incidents": 45,
+    "wasted": 35,
+    "fragile": 10,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 333.3333333333333,
+    "cost": 24000.0,
+    "incidents": 53,
+    "wasted": 31,
+    "fragile": 19,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 349.75,
+    "cost": 25182.0,
+    "incidents": 60,
+    "wasted": 39,
+    "fragile": 16,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 308.0833333333333,
+    "cost": 22182.0,
+    "incidents": 52,
+    "wasted": 34,
+    "fragile": 11,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 300.25,
+    "cost": 21618.0,
+    "incidents": 48,
+    "wasted": 31,
+    "fragile": 12,
+    "reviews": 0,
+    "library": 105
+   }
+  ],
+  "automate_all_guard": [
+   {
+    "policy": "automate_all_guard",
+    "hours": 242.24166666666667,
+    "cost": 17441.399999999998,
+    "incidents": 0,
+    "wasted": 26,
+    "fragile": 10,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 240.04166666666666,
+    "cost": 17283.0,
+    "incidents": 0,
+    "wasted": 29,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 237.675,
+    "cost": 17112.6,
+    "incidents": 0,
+    "wasted": 33,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 241.86666666666667,
+    "cost": 17414.399999999998,
+    "incidents": 0,
+    "wasted": 30,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 263.775,
+    "cost": 18991.8,
+    "incidents": 0,
+    "wasted": 32,
+    "fragile": 16,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 246.08333333333334,
+    "cost": 17718.0,
+    "incidents": 0,
+    "wasted": 29,
+    "fragile": 15,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 260.85,
+    "cost": 18781.2,
+    "incidents": 0,
+    "wasted": 20,
+    "fragile": 14,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 282.84166666666664,
+    "cost": 20364.6,
+    "incidents": 0,
+    "wasted": 25,
+    "fragile": 23,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 255.15,
+    "cost": 18370.8,
+    "incidents": 0,
+    "wasted": 33,
+    "fragile": 13,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 256.525,
+    "cost": 18469.8,
+    "incidents": 0,
+    "wasted": 29,
+    "fragile": 14,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 258.65833333333336,
+    "cost": 18623.399999999998,
+    "incidents": 0,
+    "wasted": 23,
+    "fragile": 14,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 249.375,
+    "cost": 17955.0,
+    "incidents": 0,
+    "wasted": 27,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 246.79166666666666,
+    "cost": 17769.0,
+    "incidents": 0,
+    "wasted": 26,
+    "fragile": 10,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 262.84166666666664,
+    "cost": 18924.6,
+    "incidents": 0,
+    "wasted": 24,
+    "fragile": 13,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 254.05,
+    "cost": 18291.6,
+    "incidents": 0,
+    "wasted": 31,
+    "fragile": 16,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 237.15,
+    "cost": 17074.8,
+    "incidents": 0,
+    "wasted": 29,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 256.1166666666667,
+    "cost": 18440.399999999998,
+    "incidents": 0,
+    "wasted": 28,
+    "fragile": 16,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 248.13333333333333,
+    "cost": 17865.6,
+    "incidents": 0,
+    "wasted": 29,
+    "fragile": 11,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 240.95833333333334,
+    "cost": 17349.0,
+    "incidents": 0,
+    "wasted": 27,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 260.71666666666664,
+    "cost": 18771.6,
+    "incidents": 0,
+    "wasted": 26,
+    "fragile": 13,
+    "reviews": 0,
+    "library": 84
+   }
+  ],
+  "full_ai": [
+   {
+    "policy": "full_ai",
+    "hours": 194.30833333333334,
+    "cost": 14504.999999999998,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 4,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 201.625,
+    "cost": 15031.8,
+    "incidents": 0,
+    "wasted": 2,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 208.18333333333334,
+    "cost": 15503.999999999998,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 4,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 216.78333333333333,
+    "cost": 16123.199999999999,
+    "incidents": 0,
+    "wasted": 3,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 209.275,
+    "cost": 15582.599999999999,
+    "incidents": 0,
+    "wasted": 6,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 198.68333333333334,
+    "cost": 14819.999999999998,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 214.58333333333334,
+    "cost": 15964.8,
+    "incidents": 0,
+    "wasted": 2,
+    "fragile": 4,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 224.58333333333334,
+    "cost": 16684.8,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 220.2,
+    "cost": 16369.199999999999,
+    "incidents": 0,
+    "wasted": 7,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 213.35,
+    "cost": 15875.999999999998,
+    "incidents": 0,
+    "wasted": 7,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 225.00833333333333,
+    "cost": 16715.399999999998,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 214.65833333333333,
+    "cost": 15970.199999999999,
+    "incidents": 0,
+    "wasted": 4,
+    "fragile": 3,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 210.5,
+    "cost": 15670.8,
+    "incidents": 0,
+    "wasted": 2,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 227.49166666666667,
+    "cost": 16894.2,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 214.75833333333333,
+    "cost": 15977.399999999998,
+    "incidents": 0,
+    "wasted": 4,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 228.34166666666667,
+    "cost": 16955.399999999998,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 214.5,
+    "cost": 15958.8,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 203.79166666666666,
+    "cost": 15187.8,
+    "incidents": 0,
+    "wasted": 7,
+    "fragile": 4,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 211.4,
+    "cost": 15735.599999999999,
+    "incidents": 0,
+    "wasted": 9,
+    "fragile": 2,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 216.60833333333332,
+    "cost": 16110.599999999999,
+    "incidents": 0,
+    "wasted": 4,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 84
+   }
+  ],
+  "proposed": [
+   {
+    "policy": "proposed",
+    "hours": 179.85,
+    "cost": 13463.999999999998,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 1,
+    "reviews": 3,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 176.21666666666667,
+    "cost": 13202.4,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 3,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 193.93333333333334,
+    "cost": 14477.999999999998,
+    "incidents": 0,
+    "wasted": 2,
+    "fragile": 1,
+    "reviews": 8,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 189.975,
+    "cost": 14192.999999999998,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 0,
+    "reviews": 5,
+    "library": 83
+   },
+   {
+    "policy": "proposed",
+    "hours": 197.14166666666668,
+    "cost": 14708.999999999998,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 1,
+    "reviews": 4,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 180.85833333333332,
+    "cost": 13536.599999999999,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 0,
+    "reviews": 5,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 198.825,
+    "cost": 14830.199999999999,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 4,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 203.31666666666666,
+    "cost": 15153.599999999999,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 1,
+    "reviews": 5,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 192.94166666666666,
+    "cost": 14406.599999999999,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 1,
+    "reviews": 5,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 193.51666666666668,
+    "cost": 14447.999999999998,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 3,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 193.61666666666667,
+    "cost": 14455.199999999999,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 1,
+    "reviews": 4,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 200.99166666666667,
+    "cost": 14986.199999999999,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 6,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 189.66666666666666,
+    "cost": 14170.8,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 0,
+    "reviews": 4,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 204.20833333333334,
+    "cost": 15217.8,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 1,
+    "reviews": 7,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 190.29166666666666,
+    "cost": 14215.8,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 0,
+    "reviews": 6,
+    "library": 83
+   },
+   {
+    "policy": "proposed",
+    "hours": 190.45,
+    "cost": 14227.199999999999,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 1,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 189.725,
+    "cost": 14174.999999999998,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 0,
+    "reviews": 7,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 177.18333333333334,
+    "cost": 13271.999999999998,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 2,
+    "library": 83
+   },
+   {
+    "policy": "proposed",
+    "hours": 201.50833333333333,
+    "cost": 15023.4,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 1,
+    "reviews": 5,
+    "library": 84
+   },
+   {
+    "policy": "proposed",
+    "hours": 192.05833333333334,
+    "cost": 14342.999999999998,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 5,
+    "library": 84
+   }
+  ]
+ },
+ "shifted_raw": {
+  "manual": [
+   {
+    "policy": "manual",
+    "hours": 507.0,
+    "cost": 36504.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 512.0,
+    "cost": 36864.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 518.0,
+    "cost": 37296.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 515.0,
+    "cost": 37080.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 513.5,
+    "cost": 36972.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 510.5,
+    "cost": 36756.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 516.5,
+    "cost": 37188.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 512.0,
+    "cost": 36864.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 515.5,
+    "cost": 37116.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 519.0,
+    "cost": 37368.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 514.5,
+    "cost": 37044.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 515.0,
+    "cost": 37080.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 520.0,
+    "cost": 37440.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 520.5,
+    "cost": 37476.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 510.5,
+    "cost": 36756.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 520.0,
+    "cost": 37440.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 515.0,
+    "cost": 37080.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 516.5,
+    "cost": 37188.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 517.0,
+    "cost": 37224.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   },
+   {
+    "policy": "manual",
+    "hours": 520.0,
+    "cost": 37440.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 0
+   }
+  ],
+  "rule": [
+   {
+    "policy": "rule",
+    "hours": 275.2916666666667,
+    "cost": 19821.0,
+    "incidents": 0,
+    "wasted": 7,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 272.1166666666667,
+    "cost": 19592.399999999998,
+    "incidents": 0,
+    "wasted": 6,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 282.19166666666666,
+    "cost": 20317.8,
+    "incidents": 0,
+    "wasted": 6,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 268.5,
+    "cost": 19332.0,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 83
+   },
+   {
+    "policy": "rule",
+    "hours": 281.3833333333333,
+    "cost": 20259.6,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 272.575,
+    "cost": 19625.399999999998,
+    "incidents": 0,
+    "wasted": 9,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 286.425,
+    "cost": 20622.6,
+    "incidents": 0,
+    "wasted": 6,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 254.88333333333333,
+    "cost": 18351.6,
+    "incidents": 0,
+    "wasted": 7,
+    "fragile": 1,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 278.15,
+    "cost": 20026.8,
+    "incidents": 0,
+    "wasted": 9,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 268.7,
+    "cost": 19346.399999999998,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 287.95,
+    "cost": 20732.399999999998,
+    "incidents": 0,
+    "wasted": 11,
+    "fragile": 11,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 272.5416666666667,
+    "cost": 19623.0,
+    "incidents": 0,
+    "wasted": 4,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 255.2,
+    "cost": 18374.399999999998,
+    "incidents": 0,
+    "wasted": 4,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 293.5,
+    "cost": 21132.0,
+    "incidents": 0,
+    "wasted": 7,
+    "fragile": 12,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 268.76666666666665,
+    "cost": 19351.2,
+    "incidents": 0,
+    "wasted": 9,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 283.9916666666667,
+    "cost": 20447.399999999998,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 279.53333333333336,
+    "cost": 20126.399999999998,
+    "incidents": 0,
+    "wasted": 12,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 286.075,
+    "cost": 20597.399999999998,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 10,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 288.85,
+    "cost": 20797.2,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 11,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "rule",
+    "hours": 289.90833333333336,
+    "cost": 20873.399999999998,
+    "incidents": 0,
+    "wasted": 6,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 84
+   }
+  ],
+  "automate_all": [
+   {
+    "policy": "automate_all",
+    "hours": 353.0833333333333,
+    "cost": 25422.0,
+    "incidents": 62,
+    "wasted": 49,
+    "fragile": 20,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 381.4166666666667,
+    "cost": 27462.0,
+    "incidents": 71,
+    "wasted": 48,
+    "fragile": 21,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 410.6666666666667,
+    "cost": 29568.0,
+    "incidents": 77,
+    "wasted": 63,
+    "fragile": 24,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 425.0833333333333,
+    "cost": 30606.0,
+    "incidents": 83,
+    "wasted": 57,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 375.8333333333333,
+    "cost": 27060.0,
+    "incidents": 69,
+    "wasted": 58,
+    "fragile": 15,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 404.4166666666667,
+    "cost": 29118.0,
+    "incidents": 73,
+    "wasted": 52,
+    "fragile": 26,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 393.5,
+    "cost": 28332.0,
+    "incidents": 73,
+    "wasted": 56,
+    "fragile": 21,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 385.0833333333333,
+    "cost": 27726.0,
+    "incidents": 69,
+    "wasted": 55,
+    "fragile": 20,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 369.9166666666667,
+    "cost": 26634.0,
+    "incidents": 67,
+    "wasted": 51,
+    "fragile": 19,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 377.5,
+    "cost": 27180.0,
+    "incidents": 71,
+    "wasted": 62,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 467.5,
+    "cost": 33660.0,
+    "incidents": 87,
+    "wasted": 45,
+    "fragile": 35,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 398.9166666666667,
+    "cost": 28722.0,
+    "incidents": 77,
+    "wasted": 53,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 395.0833333333333,
+    "cost": 28446.0,
+    "incidents": 72,
+    "wasted": 54,
+    "fragile": 28,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 460.4166666666667,
+    "cost": 33150.0,
+    "incidents": 91,
+    "wasted": 54,
+    "fragile": 22,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 360.75,
+    "cost": 25974.0,
+    "incidents": 65,
+    "wasted": 51,
+    "fragile": 16,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 442.1666666666667,
+    "cost": 31836.0,
+    "incidents": 94,
+    "wasted": 53,
+    "fragile": 13,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 424.6666666666667,
+    "cost": 30576.0,
+    "incidents": 75,
+    "wasted": 51,
+    "fragile": 31,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 420.75,
+    "cost": 30294.0,
+    "incidents": 81,
+    "wasted": 68,
+    "fragile": 21,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 392.5833333333333,
+    "cost": 28266.0,
+    "incidents": 72,
+    "wasted": 47,
+    "fragile": 22,
+    "reviews": 0,
+    "library": 105
+   },
+   {
+    "policy": "automate_all",
+    "hours": 413.25,
+    "cost": 29754.0,
+    "incidents": 77,
+    "wasted": 51,
+    "fragile": 25,
+    "reviews": 0,
+    "library": 105
+   }
+  ],
+  "automate_all_guard": [
+   {
+    "policy": "automate_all_guard",
+    "hours": 307.05833333333334,
+    "cost": 22108.2,
+    "incidents": 0,
+    "wasted": 40,
+    "fragile": 17,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 320.6166666666667,
+    "cost": 23084.399999999998,
+    "incidents": 0,
+    "wasted": 43,
+    "fragile": 15,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 341.775,
+    "cost": 24607.8,
+    "incidents": 0,
+    "wasted": 53,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 320.525,
+    "cost": 23077.8,
+    "incidents": 0,
+    "wasted": 43,
+    "fragile": 15,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 317.3666666666667,
+    "cost": 22850.399999999998,
+    "incidents": 0,
+    "wasted": 41,
+    "fragile": 12,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 326.0833333333333,
+    "cost": 23478.0,
+    "incidents": 0,
+    "wasted": 47,
+    "fragile": 21,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 324.85833333333335,
+    "cost": 23389.8,
+    "incidents": 0,
+    "wasted": 46,
+    "fragile": 16,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 326.01666666666665,
+    "cost": 23473.2,
+    "incidents": 0,
+    "wasted": 45,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 329.8,
+    "cost": 23745.6,
+    "incidents": 0,
+    "wasted": 46,
+    "fragile": 19,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 313.3666666666667,
+    "cost": 22562.399999999998,
+    "incidents": 0,
+    "wasted": 47,
+    "fragile": 14,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 343.55,
+    "cost": 24735.6,
+    "incidents": 0,
+    "wasted": 40,
+    "fragile": 28,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 322.85,
+    "cost": 23245.2,
+    "incidents": 0,
+    "wasted": 44,
+    "fragile": 13,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 325.375,
+    "cost": 23427.0,
+    "incidents": 0,
+    "wasted": 40,
+    "fragile": 25,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 329.975,
+    "cost": 23758.2,
+    "incidents": 0,
+    "wasted": 42,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 302.675,
+    "cost": 21792.6,
+    "incidents": 0,
+    "wasted": 39,
+    "fragile": 10,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 310.625,
+    "cost": 22365.0,
+    "incidents": 0,
+    "wasted": 43,
+    "fragile": 11,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 340.7583333333333,
+    "cost": 24534.6,
+    "incidents": 0,
+    "wasted": 40,
+    "fragile": 23,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 325.40833333333336,
+    "cost": 23429.399999999998,
+    "incidents": 0,
+    "wasted": 53,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 319.4583333333333,
+    "cost": 23001.0,
+    "incidents": 0,
+    "wasted": 47,
+    "fragile": 18,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "automate_all_guard",
+    "hours": 346.10833333333335,
+    "cost": 24919.8,
+    "incidents": 0,
+    "wasted": 40,
+    "fragile": 23,
+    "reviews": 0,
+    "library": 84
+   }
+  ],
+  "full_ai": [
+   {
+    "policy": "full_ai",
+    "hours": 283.26666666666665,
+    "cost": 20910.0,
+    "incidents": 0,
+    "wasted": 6,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 300.35833333333335,
+    "cost": 22140.6,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 307.9166666666667,
+    "cost": 22684.8,
+    "incidents": 0,
+    "wasted": 6,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 290.15833333333336,
+    "cost": 21406.199999999997,
+    "incidents": 0,
+    "wasted": 7,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 83
+   },
+   {
+    "policy": "full_ai",
+    "hours": 295.44166666666666,
+    "cost": 21786.6,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 300.78333333333336,
+    "cost": 22171.199999999997,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 301.6666666666667,
+    "cost": 22234.8,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 273.3333333333333,
+    "cost": 20194.8,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 2,
+    "reviews": 0,
+    "library": 83
+   },
+   {
+    "policy": "full_ai",
+    "hours": 302.725,
+    "cost": 22311.0,
+    "incidents": 0,
+    "wasted": 9,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 83
+   },
+   {
+    "policy": "full_ai",
+    "hours": 288.775,
+    "cost": 21306.6,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 302.55,
+    "cost": 22298.399999999998,
+    "incidents": 0,
+    "wasted": 12,
+    "fragile": 10,
+    "reviews": 0,
+    "library": 82
+   },
+   {
+    "policy": "full_ai",
+    "hours": 296.28333333333336,
+    "cost": 21847.199999999997,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 5,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 280.4166666666667,
+    "cost": 20704.8,
+    "incidents": 0,
+    "wasted": 4,
+    "fragile": 9,
+    "reviews": 0,
+    "library": 83
+   },
+   {
+    "policy": "full_ai",
+    "hours": 314.59166666666664,
+    "cost": 23165.399999999998,
+    "incidents": 0,
+    "wasted": 9,
+    "fragile": 15,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 284.98333333333335,
+    "cost": 21033.6,
+    "incidents": 0,
+    "wasted": 8,
+    "fragile": 6,
+    "reviews": 0,
+    "library": 82
+   },
+   {
+    "policy": "full_ai",
+    "hours": 300.60833333333335,
+    "cost": 22158.6,
+    "incidents": 0,
+    "wasted": 10,
+    "fragile": 8,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 294.375,
+    "cost": 21709.8,
+    "incidents": 0,
+    "wasted": 12,
+    "fragile": 10,
+    "reviews": 0,
+    "library": 84
+   },
+   {
+    "policy": "full_ai",
+    "hours": 299.7916666666667,
+    "cost": 22099.8,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 10,
+    "reviews": 0,
+    "library": 82
+   },
+   {
+    "policy": "full_ai",
+    "hours": 310.98333333333335,
+    "cost": 22905.6,
+    "incidents": 0,
+    "wasted": 6,
+    "fragile": 13,
+    "reviews": 0,
+    "library": 83
+   },
+   {
+    "policy": "full_ai",
+    "hours": 308.30833333333334,
+    "cost": 22713.0,
+    "incidents": 0,
+    "wasted": 5,
+    "fragile": 7,
+    "reviews": 0,
+    "library": 84
+   }
+  ],
+  "proposed": [
+   {
+    "policy": "proposed",
+    "hours": 288.94166666666666,
+    "cost": 21318.6,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 4,
+    "library": 75
+   },
+   {
+    "policy": "proposed",
+    "hours": 286.03333333333336,
+    "cost": 21109.199999999997,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 2,
+    "library": 78
+   },
+   {
+    "policy": "proposed",
+    "hours": 285.78333333333336,
+    "cost": 21091.199999999997,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 0,
+    "library": 81
+   },
+   {
+    "policy": "proposed",
+    "hours": 271.64166666666665,
+    "cost": 20073.0,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 1,
+    "reviews": 2,
+    "library": 80
+   },
+   {
+    "policy": "proposed",
+    "hours": 286.6,
+    "cost": 21150.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 5,
+    "library": 82
+   },
+   {
+    "policy": "proposed",
+    "hours": 280.8666666666667,
+    "cost": 20737.199999999997,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 2,
+    "library": 78
+   },
+   {
+    "policy": "proposed",
+    "hours": 292.53333333333336,
+    "cost": 21577.199999999997,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 3,
+    "library": 81
+   },
+   {
+    "policy": "proposed",
+    "hours": 285.64166666666665,
+    "cost": 21081.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 3,
+    "library": 76
+   },
+   {
+    "policy": "proposed",
+    "hours": 292.075,
+    "cost": 21544.199999999997,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 1,
+    "reviews": 2,
+    "library": 78
+   },
+   {
+    "policy": "proposed",
+    "hours": 275.48333333333335,
+    "cost": 20349.6,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 5,
+    "library": 79
+   },
+   {
+    "policy": "proposed",
+    "hours": 288.275,
+    "cost": 21270.6,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 4,
+    "library": 75
+   },
+   {
+    "policy": "proposed",
+    "hours": 300.21666666666664,
+    "cost": 22130.399999999998,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 2,
+    "reviews": 4,
+    "library": 78
+   },
+   {
+    "policy": "proposed",
+    "hours": 270.2416666666667,
+    "cost": 19972.199999999997,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 1,
+    "library": 77
+   },
+   {
+    "policy": "proposed",
+    "hours": 275.05,
+    "cost": 20318.399999999998,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 1,
+    "library": 83
+   },
+   {
+    "policy": "proposed",
+    "hours": 283.5833333333333,
+    "cost": 20932.8,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 1,
+    "library": 74
+   },
+   {
+    "policy": "proposed",
+    "hours": 291.825,
+    "cost": 21526.199999999997,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 3,
+    "library": 77
+   },
+   {
+    "policy": "proposed",
+    "hours": 294.1166666666667,
+    "cost": 21691.199999999997,
+    "incidents": 0,
+    "wasted": 1,
+    "fragile": 0,
+    "reviews": 6,
+    "library": 79
+   },
+   {
+    "policy": "proposed",
+    "hours": 280.75,
+    "cost": 20728.8,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 1,
+    "library": 76
+   },
+   {
+    "policy": "proposed",
+    "hours": 287.26666666666665,
+    "cost": 21198.0,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 1,
+    "reviews": 2,
+    "library": 79
+   },
+   {
+    "policy": "proposed",
+    "hours": 294.56666666666666,
+    "cost": 21723.6,
+    "incidents": 0,
+    "wasted": 0,
+    "fragile": 0,
+    "reviews": 1,
+    "library": 81
+   }
+  ]
+ },
+ "sweep": {
+  "indist": [
+   [
+    0.5,
+    61.72,
+    1.09,
+    0.6,
+    4.5
+   ],
+   [
+    0.6,
+    61.62,
+    1.14,
+    0.6,
+    4.5
+   ],
+   [
+    0.7,
+    61.54,
+    1.15,
+    0.6,
+    4.5
+   ],
+   [
+    0.8,
+    61.52,
+    1.15,
+    0.6,
+    4.5
+   ],
+   [
+    0.85,
+    61.51,
+    1.15,
+    0.6,
+    4.5
+   ],
+   [
+    0.9,
+    61.45,
+    1.12,
+    0.6,
+    4.4
+   ],
+   [
+    0.95,
+    61.45,
+    1.12,
+    0.6,
+    4.4
+   ],
+   [
+    1.0,
+    61.45,
+    1.12,
+    0.6,
+    4.4
+   ]
+  ],
+  "shift": [
+   [
+    0.5,
+    43.25,
+    1.03,
+    0.2,
+    2.8
+   ],
+   [
+    0.6,
+    43.23,
+    1.0,
+    0.3,
+    2.8
+   ],
+   [
+    0.7,
+    43.23,
+    1.03,
+    0.2,
+    2.8
+   ],
+   [
+    0.8,
+    43.23,
+    1.04,
+    0.2,
+    2.8
+   ],
+   [
+    0.85,
+    43.23,
+    1.04,
+    0.2,
+    2.8
+   ],
+   [
+    0.9,
+    43.18,
+    1.09,
+    0.2,
+    2.8
+   ],
+   [
+    0.95,
+    43.14,
+    1.04,
+    0.3,
+    2.8
+   ],
+   [
+    1.0,
+    43.14,
+    1.04,
+    0.3,
+    2.8
+   ]
+  ]
+ }
+}
