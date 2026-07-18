@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it using the metadata below."
+title: "Network Orchestration Framework — Simulation & Validation Code"
+type: software
+version: "3.0.0"
+date-released: "2026-07-18"
+authors:
+  - family-names: Annahdi
+    given-names: Tasneem
+    affiliation: "Imam Abdulrahman Bin Faisal University"
+  - family-names: Alsumayt
+    given-names: Albandari
+    affiliation: "Imam Abdulrahman Bin Faisal University"
+  - family-names: Alshammari
+    given-names: Majid
+    affiliation: "Taif University"
+license: MIT
+repository-code: "https://github.com/usamrf/orchestration-ai-validation"
+keywords:
+  - network orchestration
+  - AI decision-maker
+  - gradual automation
+  - cybersecurity
+  - simulation
+preferred-citation:
+  type: article
+  title: "Network Orchestration Framework Design Using AI-Driven Automation And Cybersecurity"
+  authors:
+    - family-names: Annahdi
+      given-names: Tasneem
+    - family-names: Alsumayt
+      given-names: Albandari
+    - family-names: Alshammari
+      given-names: Majid
+  journal: "Future Internet"
+  year: 2026
+  notes: "Under review; DOI to be added upon publication."
